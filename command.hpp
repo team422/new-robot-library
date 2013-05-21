@@ -16,6 +16,8 @@ public:
 
 	std::vector<Subsystem*> get_requirements();
 
+	bool does_require( const Subsystem* );
+
 	void operator()();
 private:
 	std::function<void()> my_action;
