@@ -1,10 +1,12 @@
 #include "command.hpp"
 #include <algorithm>
 
-Command::Command() {}
+Command::Command() :
+  my_is_interruptible( true ) {}
 
 Command::Command( std::function<void()> action ) :
-  my_action( action ) {}
+  my_action( action ),
+  my_is_interruptible( true ) {}
 
 void Command::set_action( std::function<void()> action ) {
 	my_action = action;
@@ -29,6 +31,14 @@ bool Command::does_require( const Subsystem subsystem ) {
 	else {
 		return false;
 	}
+}
+
+void Command::set_interruptible( bool is_interruptible ) {
+	my_is_interruptible = is_interruptible;
+}
+
+bool Command::get_interruptible() {
+	return my_is_interruptible;
 }
 
 void Command::operator()() {

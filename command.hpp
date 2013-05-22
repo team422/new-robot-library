@@ -6,7 +6,7 @@
 #include "subsystem.hpp"
 
 class Command {
-public:
+  public:
 	Command();
 	Command( std::function<void()> );
 
@@ -18,10 +18,15 @@ public:
 
 	bool does_require( const Subsystem& );
 
+	void set_interruptible( bool );
+
+	bool get_interruptible();
+
 	void operator()();
-private:
+  private:
 	std::function<void()> my_action;
 	std::vector<Subsystem*> my_requirements;
+	bool my_is_interruptible;
 };
 
 #endif // COMMAND_HPP_INCLUDED
