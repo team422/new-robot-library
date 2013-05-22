@@ -8,7 +8,7 @@ Command::Command( std::function<void()> action ) :
   my_action( action ),
   my_is_interruptible( true ) {}
 
-void Command::set_action( std::function<void()> action ) {
+inline void Command::set_action( std::function<void()> action ) {
 	my_action = action;
 }
 
@@ -19,7 +19,7 @@ void Command::requires( const Subsystem &subsystem ) {
 	}
 }
 
-std::vector<Subsystem*> Command::get_requirements() {
+inline std::vector<Subsystem*> Command::get_requirements() {
 	return my_requirements;
 }
 
@@ -33,14 +33,14 @@ bool Command::does_require( const Subsystem subsystem ) {
 	}
 }
 
-void Command::set_interruptible( bool is_interruptible ) {
+inline void Command::set_interruptible( bool is_interruptible ) {
 	my_is_interruptible = is_interruptible;
 }
 
-bool Command::get_interruptible() {
+inline bool Command::get_interruptible() {
 	return my_is_interruptible;
 }
 
-void Command::operator()() {
+inline void Command::operator()() {
 	my_action();
 }
