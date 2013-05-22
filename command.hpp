@@ -12,11 +12,11 @@ public:
 
 	void set_action( std::function<void()> );
 
-	void requires( const Subsystem* );
+	void requires( const Subsystem& );
 
 	std::vector<Subsystem*> get_requirements();
 
-	bool does_require( const Subsystem* );
+	bool does_require( const Subsystem& );
 
 	void operator()();
 private:
