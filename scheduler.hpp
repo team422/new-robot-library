@@ -1,5 +1,5 @@
-#ifndef SCHEDULER_CPP_INCLUDED
-#define SCHEDULET_CPP_INCLUDED
+#ifndef SCHEDULER_CPP_INCLUDED_422_MTD_
+#define SCHEDULER_CPP_INCLUDED_422_MTD_
 
 #include <unordered_set>
 #include "command.hpp"
@@ -19,4 +19,4 @@ class Scheduler {
 	std::unordered_set<Subsystem*> my_active_subsystems;
 };
 
-#endif SCHEDULER_CPP_INCLUDED
+#endif // SCHEDULER_CPP_INCLUDED_422_MTD

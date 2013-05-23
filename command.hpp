@@ -1,5 +1,5 @@
-#ifndef COMMAND_HPP_INCLUDED
-#define COMMAND_HPP_INCLUDED
+#ifndef COMMAND_HPP_INCLUDED_422_MTD_
+#define COMMAND_HPP_INCLUDED_422_MTD_
 
 #include <unordered_set>
 #include <functional>
@@ -29,4 +29,4 @@ class Command {
 	bool my_is_interruptible;
 };
 
-#endif // COMMAND_HPP_INCLUDED
+#endif // COMMAND_HPP_INCLUDED_422_MTD_
