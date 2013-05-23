@@ -1,9 +1,9 @@
-#ifndef BUTTON_HPP_422_MTD_
-#define BUTTON_HPP_422_MTD_
+#ifndef BUTTON_HPP_INCLUDED_422_MTD_
+#define BUTTON_HPP_INCLUDED_422_MTD_
 
 class Button {
   public:
 	virtual bool is_pressed() = 0;
 };
 
-#endif // BUTTON_HPP_422_MTD_
+#endif // BUTTON_HPP_INCLUDED_422_MTD_
