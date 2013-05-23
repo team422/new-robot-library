@@ -10,10 +10,14 @@ class Scheduler {
   public:
 	bool schedule( Command& );
 	bool schedule( CommandSequence& )
+
 	bool repeat( Command& );
 	bool repeat( CommandSequence& );
 	bool repeat( Command&, int );
 	bool repeat( CommandSequence&, int );
+
+	void bind( Button&, Command& );
+	void bind( Button&, CommandSequence& );
 
   private:
 	std::unordered_set<Subsystem*> my_active_subsystems;
