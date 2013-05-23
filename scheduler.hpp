@@ -4,6 +4,7 @@
 #include <unordered_set>
 #include "command.hpp"
 #include "command_sequence.hpp"
+#include "button.hpp"
 #include "subsystem.hpp"
 
 class Scheduler {
@@ -18,6 +19,9 @@ class Scheduler {
 
 	void bind( Button&, Command& );
 	void bind( Button&, CommandSequence& );
+
+	void repeat_while_held( Button&, Command& );
+	void repeat_while_held( Button&, CommandSequence& );
 
   private:
 	std::unordered_set<Subsystem*> my_active_subsystems;
