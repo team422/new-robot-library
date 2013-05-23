@@ -1,7 +1,7 @@
 #ifndef COMMAND_HPP_INCLUDED
 #define COMMAND_HPP_INCLUDED
 
-#include <vector>
+#include <unordered_set>
 #include <functional>
 #include "subsystem.hpp"
 
@@ -14,7 +14,7 @@ class Command {
 
 	void requires( const Subsystem& );
 
-	std::vector<Subsystem*> get_requirements();
+	std::unordered_set<Subsystem*> get_requirements();
 
 	bool does_require( const Subsystem& );
 
@@ -25,7 +25,7 @@ class Command {
 	void operator()();
   private:
 	std::function<void()> my_action;
-	std::vector<Subsystem*> my_requirements;
+	std::unordered_set<Subsystem*> my_requirements;
 	bool my_is_interruptible;
 };
 
