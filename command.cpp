@@ -30,14 +30,6 @@ bool Command::does_require( const Subsystem subsystem ) {
 	}
 }
 
-inline void Command::set_interruptible( bool is_interruptible ) {
-	my_is_interruptible = is_interruptible;
-}
-
-inline bool Command::get_interruptible() {
-	return my_is_interruptible;
-}
-
 inline void Command::operator()() {
 	my_action();
 }
