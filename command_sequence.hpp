@@ -1,7 +1,6 @@
 #ifndef COMMAND_SEQUENCE_HPP_INCLUDED_422_MTD_
 #define COMMAND_SEQUENCE_HPP_INCLUDED_422_MTD_
 
-#include <initializer_list>
 #include <vector>
 #include <utility>
 #include "command.hpp"
